@@ -41,13 +41,19 @@ function abortButtonClicked(event){
 }
 
 function upButtonClicked(event) {
-    alert('clicked');
-
+    console.log('upButtonClicked');
+    let spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+    let height = Number(spaceShuttleHeight.innerHTML);
+    height += 10000;
+    spaceShuttleHeight.innerHTML = String(height);
 }
 
 function downButtonClicked(event) {
-    alert('clicked');
-
+    console.log('downButtonClicked');
+    let spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+    let height = Number(spaceShuttleHeight.innerHTML);
+    height -= 10000;
+    spaceShuttleHeight.innerHTML = String(height);
 }
 
 function rightButtonClicked(event) {
