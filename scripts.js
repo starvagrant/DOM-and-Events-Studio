@@ -28,8 +28,16 @@ function landButtonClicked(event){
 }
 
 function abortButtonClicked(event){
-    alert('clicked');
-
+    console.log('abort mission clicked');
+    missionAborted = window.confirm("Confirm that you want to abort the mission");
+    if (missionAborted) {
+        let flightStatus = document.getElementById('flightStatus');
+        flightStatus.innerHTML = "Mission aborted.";
+        let shuttleBackground = document.getElementById('shuttleBackground')
+        shuttleBackground.style['background-color'] = "green";
+        let spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+        spaceShuttleHeight.innerHTML = '0';
+    }
 }
 
 function upButtonClicked(event) {
