@@ -51,12 +51,35 @@ function downButtonClicked(event) {
 }
 
 function rightButtonClicked(event) {
-    alert('clicked');
+    console.log('rightButtonClicked');
+    rightButton = document.getElementById('right-button');
+    rocketImage = document.getElementById('rocket');
+    console.log(rocketImage.style);
+    rocketImage.style.position = "absolute";
+    if (rocketImage.style.left === "") {
+        rocketImage.style.left = "0px";
+    }
+    let left = Number(rocketImage.style.left.substr(0, rocketImage.style.left.indexOf('px')));
+    left += 10;
+    rocketImage.style.left = left + "px";
+    console.log(rocketImage.style.left);
 
 }
 
 function leftButtonClicked(event) {
-    alert('clicked');
+    console.log('right button clicked!');
+
+    leftButton = document.getElementById('left-button');
+    rocketImage = document.getElementById('rocket');
+    console.log(rocketImage.style);
+    rocketImage.style.position = "absolute";
+    if (rocketImage.style.left === "") {
+        rocketImage.style.left = "0px";
+    }
+    let left = Number(rocketImage.style.left.substr(0, rocketImage.style.left.indexOf('px')));
+    left -= 10;
+    rocketImage.style.left = left + "px";
+    console.log(rocketImage.style.left);
 }
 
 function addEventHandlers() {
