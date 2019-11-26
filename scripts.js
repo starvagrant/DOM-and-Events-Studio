@@ -1,7 +1,18 @@
 // Write your JavaScript code here.
 // Remember to pay attention to page loading!
 function takeButtonClicked(event){
-    alert('clicked');
+    console.log('take button clicked!');
+    let shuttleReady = window.confirm("Confirm that the shuttle is ready for liftoff");
+    if (shuttleReady){
+        let flightStatus = document.getElementById('flightStatus');
+        flightStatus.innerHTML = "Shuttle in Flight";
+        let shuttleBackground = document.getElementById('shuttleBackground');
+        shuttleBackground.style['background-color'] = "blue";
+        let spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+        let height = Number(spaceShuttleHeight.innerHTML);
+        height += 10000;
+        spaceShuttleHeight.innerHTML = String(height);
+    }
 
 }
 
@@ -51,7 +62,6 @@ function addEventHandlers() {
     missionAbort.addEventListener("click", abortButtonClicked);
 }
 
-function (event){
 window.addEventListener("load", function(event) {
     addEventHandlers();
 });
