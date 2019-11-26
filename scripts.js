@@ -17,8 +17,14 @@ function takeButtonClicked(event){
 }
 
 function landButtonClicked(event){
-    alert('clicked');
-
+    console.log('land button clicked!');
+    alert("The shuttle is landing. Landing gear engaged.");
+    let flightStatus = document.getElementById('flightStatus');
+    flightStatus.innerHTML = "The shuttle has landed";
+    let shuttleBackground = document.getElementById('shuttleBackground');
+    shuttleBackground.style['background-color'] = "green";
+    let spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+    spaceShuttleHeight.innerHTML = '0';
 }
 
 function abortButtonClicked(event){
